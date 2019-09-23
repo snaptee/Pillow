@@ -207,6 +207,11 @@ OPEN_INFO = {
     (MM, 6, (1,), 1, (8, 8, 8), ()): ("YCbCr", "YCbCr"),
     (II, 8, (1,), 1, (8, 8, 8), ()): ("LAB", "LAB"),
     (MM, 8, (1,), 1, (8, 8, 8), ()): ("LAB", "LAB"),
+    # For printing purpose
+    (II, 5, (1,), 1, (8, 8, 8, 8, 8, 8), ()): ("CMYKWSw", "CMYKWSw"),  # CMYK White SuperWhite
+    (MM, 5, (1,), 1, (8, 8, 8, 8, 8, 8), ()): ("CMYKWSw", "CMYKWSw"),
+    (II, 5, (1,), 1, (8, 8, 8, 8, 8, 8, 8), ()): ("CMYKWSwA", "CMYKWSwA"),  # CMYK White SuperWhite Alpha
+    (MM, 5, (1,), 1, (8, 8, 8, 8, 8, 8, 8), ()): ("CMYKWSwA", "CMYKWSwA"),
 }
 
 PREFIXES = [b"MM\000\052", b"II\052\000", b"II\xBC\000"]
@@ -1293,6 +1298,10 @@ SAVE_INFO = {
     "I;16B": ("I;16B", MM, 1, 1, (16,), None),
     "I;16BS": ("I;16BS", MM, 1, 2, (16,), None),
     "F;32BF": ("F;32BF", MM, 1, 3, (32,), None),
+
+    # extra printing mode
+    "CMYKWSw": ("CMYKWSw", II, 5, 1, (8, 8, 8, 8, 8, 8), None),
+    "CMYKWSwA": ("CMYKWSwA", II, 5, 1, (8, 8, 8, 8, 8, 8, 8), None),
 }
 
 
